@@ -9,6 +9,9 @@ const convertBtn = document.getElementById("convert");
 const usdmInput = document.getElementById("usdCollect");
 const lastAmmountInput = document.getElementById("lastAmmount");
 const errorMsg = document.getElementById("error");
+let banglaZ = document.getElementById("bdZero");
+let norwayZ = document.getElementById("nkZero");
+let canadaZ = document.getElementById("caZero");
 
 convertBtn.addEventListener("click", function () {
 	bangladesh();
@@ -23,21 +26,24 @@ function bangladesh() {
 	let usdCurrent = usdmInput.value;
 	usdCurrent = Number(usdCurrent);
 	let result = usdCurrent * bdtdT;
-	bdtValue.innerHTML = result.toFixed(2);
+	banglaZ.textContent = " bdt";
+	bdtValue.textContent = result.toFixed(2);
 }
 
 function norway() {
 	let usdCurrent = usdmInput.value;
 	usdCurrent = Number(usdCurrent);
 	let result = usdCurrent * nokK;
-	nkkValue.innerHTML = result.toFixed(2);
+	norwayZ.textContent = " kr";
+	nkkValue.textContent = result.toFixed(2);
 }
 
 function canada() {
 	let usdCurrent = usdmInput.value;
 	usdCurrent = Number(usdCurrent);
 	let result = usdCurrent * cadT;
-	cadValue.innerHTML = result.toFixed(2);
+	canadaZ.textContent = " cad";
+	cadValue.textContent = result.toFixed(2);
 }
 
 function lastAInput() {
@@ -55,6 +61,9 @@ function negeaTiveNum() {
 		bdtValue.innerHTML = "";
 		nkkValue.innerHTML = "";
 		cadValue.innerHTML = "";
+		banglaZ.textContent = " 00";
+		norwayZ.textContent = " 00";
+		canadaZ.textContent = " 00";
 	} else {
 		lastAmmountInput.textContent = "$" + usdCurrent + " dollar";
 		errorMsg.textContent = "";
