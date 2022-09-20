@@ -64,6 +64,16 @@ function negeaTiveNum() {
 		banglaZ.textContent = " 00";
 		norwayZ.textContent = " 00";
 		canadaZ.textContent = " 00";
+	} else if (usdCurrent > 50000) {
+		let errorSms = "limit over try again in between 50k";
+		errorMsg.textContent = errorSms;
+		lastAmmountInput.textContent = "";
+		bdtValue.innerHTML = "";
+		nkkValue.innerHTML = "";
+		cadValue.innerHTML = "";
+		banglaZ.textContent = " 00";
+		norwayZ.textContent = " 00";
+		canadaZ.textContent = " 00";
 	} else {
 		lastAmmountInput.textContent = "$" + usdCurrent + " dollar";
 		errorMsg.textContent = "";
