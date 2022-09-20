@@ -1,7 +1,10 @@
+html,
 body {
 	font-family: "Noto Sans", sans-serif;
 	margin: 0;
 	padding: 0;
+	width: 100%;
+	height: 100%;
 }
 /* font-family: "Anonymous Pro", monospace; */
 img {
@@ -49,9 +52,11 @@ p {
 }
 .conver-input {
 	margin-top: 50px;
+	display: inline-block;
+	position: relative;
 }
 .conver-input input {
-	width: 33%;
+	width: 80%;
 	height: 55px;
 	font-size: 30px;
 	font-weight: 700;
@@ -61,6 +66,8 @@ p {
 	padding: 10px 20px;
 	text-align: center;
 	box-sizing: border-box;
+	-webkit-appearance: none;
+	appearance: none;
 }
 .conver-input input:focus-visible {
 	outline: none;
@@ -77,12 +84,17 @@ p {
 	border: none;
 	border-radius: 0 35px 35px 0;
 	font-family: inherit;
-	padding: 18.5px 30px;
+	padding: 0px 30px 23px 30px;
 	text-align: center;
 	box-sizing: border-box;
 	display: inline-block;
 	cursor: pointer;
 	margin-left: -10px;
+	line-height: 53px;
+	display: inline-block;
+	position: absolute;
+	right: -51px;
+	top: 0;
 }
 .conver-input p {
 	color: #4b5563;
@@ -117,39 +129,41 @@ p {
 	font-weight: 600;
 	font-size: 18px;
 }
+p #error {
+	color: red;
+}
 @media (max-width: 575.98px) {
-    .colum-grid {
-        grid-template-columns: 1fr;
-        height: auto;
-    }
-    
-    .currency-list-box {
-        grid-template-columns: 1fr;
-        grid-gap: 20px;
-    } 
-    .content-col {
-        padding: 30px;
-    }
-    .heading h1 {
-        font-size: 40px;
-    }
-    .heading p {
-        font-size: 20px;
-    }
-    .conver-input input {
-        width: 60%;
-        font-size: 25px;
-    }
-    .conver-input button {
-        height: 55px;
-        padding: 16.5px 30px;
-    }
-    .single-box p {
-        font-size: 20px;
-    }
-    .single-box span {
-        height: 130px;
-        line-height: 130px;
-        font-size: 22px;
-    }
+	.colum-grid {
+		grid-template-columns: 1fr;
+		height: auto;
+	}
+
+	.currency-list-box {
+		grid-template-columns: 1fr;
+		grid-gap: 20px;
+	}
+	.content-col {
+		padding: 30px;
+	}
+	.heading h1 {
+		font-size: 35px;
+	}
+	.heading p {
+		font-size: 18px;
+	}
+	.conver-input input {
+		width: 75%;
+		font-size: 22px;
+	}
+	.conver-input button {
+		right: -30px;
+	}
+	.single-box p {
+		font-size: 19px;
+	}
+	.single-box span {
+		height: 130px;
+		line-height: 130px;
+		font-size: 22px;
+	}
 }
